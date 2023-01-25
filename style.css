@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box ;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* page */
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* header */
+header{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: center;
+    gap: 20px;
+    background-image: url('./images/pattern-bg.png');
+    background-repeat: no-repeat;
+    width:100vw ;
+    height: 250px;;
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.search{
+display: flex;
+top: 20px;
+}
+
+#searchBox{
+    width: 555px;
+    height: 58px;
+    padding: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    border: none;
+}
+
+#searchButton{
+    height: 58px;
+    width: 58px;
+    left: 0px;
+    top: 0px;
+    border-radius: [object Object]px;
+    background-color: black;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    border: none;
+    cursor: pointer;
+}
+
+/* main */
+#continerInfo{
+    display: flex;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    position: absolute;
+    width: 1110px;
+    height: 160px;
+    top: 180px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hr{
+    width: 1px;
+    height: 100px;
+}
+
+
+.boxInfo{
+padding: 40px;
+display: flex;
+flex-direction: column;
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+gap: 10px;
+color: #2B2B2B;
+}
+
+.titel{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    color: #969696;
+}
+
+#continerMap{
+    width: 100vw;
+    height: 300px; 
+}
+#map{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* footer */
+.continerDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -300px;
+    background-color: rgba(128, 128, 128, 0.373);
+    width:100vw ;
+    height: 30px;;
+}
+
+footer{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.attribution { 
+    width: 100%;
+    font-size: 11px; text-align: center;
+ }
+
+.attribution a { 
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+ } 

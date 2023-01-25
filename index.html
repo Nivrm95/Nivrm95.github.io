@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <div class="continerTop">
+      <header>
+        <h2>IP Address Tracker</h2>
+          <div class="search">
+            <input type="text" id="searchBox"  placeholder="Search for any addres or domain">
+              <button id="searchButton" type="submit"> 
+                <img src="./images/icon-arrow.svg" alt="searchBox" width="11" height="14">
+              </button>
+          </div>
+     </header>
+    </div>
+
+    <div id="continerInfo">
+      <div class="boxInfo">
+        <div class="titel">IP ADDRESS</div>
+        <div lss="info" id="ipInfo">127.01.0.7</div>
+      </div>
+      <hr>
+      <div class="boxInfo">
+        <div class="titel">LOCATION</div>
+        <div clss="info" id="locationInfo">Tel Aviv,IL
+          <br>295530
+        </div>
+      </div>
+      <hr>
+      <div class="boxInfo">
+        <div class="titel">TIMZONE</div>
+        <div clss="info" id="timezoneInfo">+02:00</div>
+      </div>
+      <hr>
+      <div class="boxInfo">
+        <div class="titel">ISP</div>
+        <div clss="info" id="ispInfo">Moveo Group</div>
+      </div>
+    </div>
+
+    <div id="continerMap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13524.358997137748!2d34.763019899999996!3d32.0668212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1siw!2sil!4v1674645263476!5m2!1siw!2sil" title="my maps" id="map"> 
+      </iframe>
+    </div>
+
+    <div class="continerDown">
+      <footer>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Niv Ram</a>.
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>
