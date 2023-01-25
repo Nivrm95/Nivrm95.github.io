@@ -75,6 +75,7 @@ top: 20px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    z-index: 1;
 }
 
 hr{
@@ -93,6 +94,7 @@ font-weight: 600;
 font-size: 26px;
 gap: 10px;
 color: #2B2B2B;
+
 }
 
 .titel{
@@ -104,10 +106,7 @@ color: #2B2B2B;
 }
 
 #continerMap{
-    width: 100vw;
-    height: 300px; 
-}
-#map{
+    z-index: 0;
     width: 100vw;
     height: 100vh;
 }

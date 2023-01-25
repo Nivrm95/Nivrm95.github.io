@@ -1,12 +1,4 @@
 
-// user clicks the button
-// a function is called
-// data is being fetched
-// info box is updated
-// map is updated
-
-
-
 
 //onClick
 document.getElementById("searchButton").addEventListener("click", countryByInput);
@@ -15,7 +7,7 @@ document.getElementById("searchButton").addEventListener("click", countryByInput
 function countryByInput(event){
     event.preventDefault()
     const valueIp = document.getElementById("searchBox").value;
-    fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_IqaOVPyAnIrIZCpFR8UP3mLPojM8w&ipAddress=${valueIp}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_nVSFhwwElgg8qB2p8rvhZyKssloV4&ipAddress=${valueIp}`)
     .then(response => response.json())
     .then(data_api => countryData(data_api))
     .catch(error => console.error(error));
@@ -34,10 +26,39 @@ document.getElementById("locationInfo").innerHTML =
 document.getElementById("timezoneInfo").innerHTML = dataObj.location.timezone;
 document.getElementById("ispInfo").innerHTML = dataObj.isp;
 console.log(document.getElementById("map"));
-//get map//
-document.getElementById("continerMap").innerHTML= `<iframe src="https://maps.google.com/maps?q=${dataObj.location.lat},${dataObj.location.lng}&hl=es;z=14&amp;output=embed" title="my maps" id="map"></iframe>`
-// document.getElementById("continerMap").innerHTML= to function
+initMap(dataObj);
+
+
 };
+
+
+//ifram
+// document.getElementById("continerMap").innerHTML= `<iframe src="https://maps.google.com/maps?q=${dataObj.location.lat},${dataObj.location.lng}&hl=es;z=14&amp;output=embed" title="my maps" id="map"></iframe>`
+
+
+//get map//
+let map;
+function initMap(dataObj) {
+    let lat=  32.109333 ;
+    let lng= 34.855499 ;
+    if (dataObj){
+        lat = dataObj.location.lat;
+        lng = dataObj.location.lng;
+    }
+    map = new google.maps.Map(document.getElementById("continerMap"), {
+        center: {lat ,lng },
+        zoom: 12,
+    });
+    
+    // Create markers.
+    const marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat,lng),
+        map: map, 
+        icon: ('./images/icon-location.svg'),
+    });
+};
+window.initMap = initMap;
+
 
 
 
